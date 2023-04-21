@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".MenuActivity">
+
+    <ImageView
+        android:id="@+id/ivMenu"
+        android:layout_width="150sp"
+        android:layout_height="150sp"
+        android:src="@drawable/cat"
+        android:layout_gravity="center"
+        android:scaleType="fitXY"
+        android:layout_margin="24sp"
+        />
+
+    <TextView
+        android:id="@+id/tvMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gatos"
+        android:layout_margin="4sp"
+        android:layout_gravity="center"
+        android:textSize="22sp"
+        android:textColor="@color/black"
+        />
+
+</LinearLayout>
