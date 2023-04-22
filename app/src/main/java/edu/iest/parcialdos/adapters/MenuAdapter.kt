@@ -1,12 +1,16 @@
 package edu.iest.parcialdos.adapters
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import edu.iest.parcialdos.DatosActivity
+import edu.iest.parcialdos.MainActivity
 import edu.iest.parcialdos.R
 import edu.iest.parcialdos.models.MenuItem
 
@@ -25,11 +29,23 @@ class MenuAdapter(menuItems: ArrayList<MenuItem>, contexto : Context) :
             init {
                 ivMenu = view.findViewById(R.id.ivMenu)
                 tvMenu = view.findViewById(R.id.tvMenu)
+                ivMenu.setOnClickListener(this)
             }
 
-        override fun onClick(v: View?) {
-            TODO("Not yet implemented")
+        override fun onClick(p0: View?) {
+
+            val MenuItem: MenuItem = innerMenuItems.get(adapterPosition)
+            // Toast.makeText( innerContext, "AQUI"+ MenuItem.id, Toast.LENGTH_SHORT ).show()
+            if (MenuItem.id == 2) {
+                //Toast.makeText( innerContext, "AQUI"+ MenuItem.id, Toast.LENGTH_SHORT ).show()
+                val i = Intent(innerContext, DatosActivity::class.java)
+                innerContext.startActivity(i)
+            }
+            if (MenuItem.id == 4) {
+                System.exit(0)
+            }
         }
+
 
     }
 

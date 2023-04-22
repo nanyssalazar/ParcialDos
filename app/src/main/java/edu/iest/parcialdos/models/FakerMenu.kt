@@ -3,6 +3,7 @@ package edu.iest.parcialdos.models
 import edu.iest.parcialdos.R
 
 // aqui agregamos todos los datos a usar en nuestro recycler
+// este archivo contiene nuestro metodo para obtener todos los elementos que queremos agregar a nuestro recycleer
 class FakerMenu {
 
     fun getMenuItems () : ArrayList<MenuItem> {
